@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom style for the offcanvas sidebar */
+        .offcanvas-header, .offcanvas-body {
+            background-color: #343a40; /* Darker background for sidebar */
+            color: white;
+        }
+        .nav-link {
+            color: #f8f9fa; /* Light text for links */
+        }
+        .nav-link:hover {
+            color: #adb5bd; /* Subtle hover effect */
+        }
+
+        /* Custom style for the hero section */
+        .hero {
+            background-color: #2c3e50; /* Dark elegant blue-gray background */
+            color: white;
+            padding: 100px 0;
+            height: 100vh; /* Full height */
+        }
+        .hero .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Custom button style */
+        .btn-custom {
+            background-color: #e74c3c; /* Elegant red button */
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+
+        /* Footer Style */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #adb5bd;
+        }
+
+        /* Form Style */
+        .contact-form {
+            background-color: #ecf0f1;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Toggler Button -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="bi bi-list"></i> Menu
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portofolio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero text-center d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <!-- Gambar profil tanpa efek api -->
+                        <img src="path-to-image.png" alt="Profil" class="profile-pic">
+                    </div>
+                    <div class="col-md-6 text-md-start">
+                        <p>HALO! NAMA SAYA</p>
+                        <h1>KHOIRUL AKHMAD INDRA</h1>
+                        <p>MAHASISWA TEKNIK INFORMATIKA UNISNU JEPARA</p>
+                        <div class="social-icons">
+                            <!-- Social Media Icons -->
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </div>
+                        <!-- Tombol -->
+                        <a href="#" class="btn btn-custom mt-4">Lihat Form</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="container contact-form">
+            <h3 class="text-center mb-4">Kontak dan Komentar</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email anda" required>
+                </div>
+                <div class="mb-3">
+                    <label for="kontak" class="form-label">Nomor Kontak</label>
+                    <input type="tel" class="form-control" id="kontak" placeholder="Masukkan nomor kontak anda" required>
+                </div>
+                <div class="mb-3">
+                    <label for="komentar" class="form-label">Komentar</label>
+                    <textarea class="form-control" id="komentar" rows="4" placeholder="Tulis komentar anda di sini" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 by Indra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/bootstrap-icons.min.js"></script>
+</body>
+</html>
